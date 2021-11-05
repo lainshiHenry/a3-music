@@ -6,7 +6,7 @@ List<Character> springTroupe = [
   Character(
     firstName: 'Sakuya',
     lastName: 'Sakuma',
-    assetImageLocation: 'assets/images/sakuya.png',
+    assetImageLocation: 'assets/images/characters/sakuya.png',
     troupe: 'Spring',
   ),
   Character(
@@ -24,13 +24,13 @@ List<Character> springTroupe = [
   Character(
     firstName: 'Itaru',
     lastName: 'Chigasaki',
-    assetImageLocation: 'assets/images/itaru.png',
+    assetImageLocation: 'assets/images/characters/itaru.png',
     troupe: 'Spring',
   ),
   Character(
     firstName: 'Citron',
     lastName: '',
-    assetImageLocation: 'assets/images/citron.png',
+    assetImageLocation: 'assets/images/characters/citron.png',
     troupe: 'Spring',
   ),
   Character(
@@ -84,36 +84,36 @@ List<Character> autumnTroupe = [
   Character(
     firstName: 'Banri',
     lastName: 'Settsu',
-    assetImageLocation: 'assets/images/banri.png',
+    assetImageLocation: 'assets/images/characters/banri.png',
   ),
   Character(
     firstName: 'Juza',
     lastName: 'Hyodo',
-    assetImageLocation: 'assets/images/juza.png',
+    assetImageLocation: 'assets/images/characters/juza.png',
     troupe: 'Autumn',
   ),
   Character(
     firstName: 'Taichi',
     lastName: 'Nanao',
-    assetImageLocation: 'assets/images/taichi.png',
+    assetImageLocation: 'assets/images/characters/taichi.png',
     troupe: 'Autumn',
   ),
   Character(
     firstName: 'Omi',
     lastName: 'Fushimi',
-    assetImageLocation: 'assets/images/omi.png',
+    assetImageLocation: 'assets/images/characters/omi.png',
     troupe: 'Autumn',
   ),
   Character(
     firstName: 'Sakyo',
     lastName: 'Furuichi',
-    assetImageLocation: 'assets/images/sakyo.png',
+    assetImageLocation: 'assets/images/characters/sakyo.png',
     troupe: 'Autumn',
   ),
   Character(
     firstName: 'Azami',
     lastName: 'Izumida',
-    assetImageLocation: 'assets/images/azami.png',
+    assetImageLocation: 'assets/images/characters/azami.png',
     troupe: 'Autumn',
   ),
 ];
@@ -121,37 +121,37 @@ List<Character> winterTroupe = [
   Character(
     firstName: 'Tsumugi',
     lastName: 'Tsukioka',
-    assetImageLocation: 'assets/images/tsumugi.png',
+    assetImageLocation: 'assets/images/characters/tsumugi.png',
     troupe: 'Winter',
   ),
   Character(
     firstName: 'Tasuku',
     lastName: 'Takato',
-    assetImageLocation: 'assets/images/tasuku.png',
+    assetImageLocation: 'assets/images/characters/tasuku.png',
     troupe: 'Winter',
   ),
   Character(
     firstName: 'Hisoka',
     lastName: 'Mikage',
-    assetImageLocation: 'assets/images/hisoka.png',
+    assetImageLocation: 'assets/images/characters/hisoka.png',
     troupe: 'Winter',
   ),
   Character(
     firstName: 'Homare',
     lastName: 'Arisugawa',
-    assetImageLocation: 'assets/images/homare.png',
+    assetImageLocation: 'assets/images/characters/homare.png',
     troupe: 'Winter',
   ),
   Character(
     firstName: 'Azuma',
     lastName: 'Yukishiro',
-    assetImageLocation: 'assets/images/azuma.png',
+    assetImageLocation: 'assets/images/characters/azuma.png',
     troupe: 'Winter',
   ),
   Character(
     firstName: 'Guy',
     lastName: '',
-    assetImageLocation: 'assets/images/guy.png',
+    assetImageLocation: 'assets/images/characters/guy.png',
     troupe: 'Winter',
   ),
 ];

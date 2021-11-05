@@ -12,7 +12,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  Services _services = Services();
+  final Services _services = Services();
 
   @override
   void initState() {
