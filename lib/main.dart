@@ -1,4 +1,4 @@
-import 'package:a3_music/screens/home_screen.dart';
+import 'package:a3_music/screens/character_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const HomeScreen(),
         HomeScreen.id: (context) => const HomeScreen(),
+        // SongsListScreen.id: (context) => const SongsListScreen(),
       },
     );
   }
