@@ -1,4 +1,5 @@
 import 'package:a3_music/data/character_data.dart';
+import 'package:a3_music/data/song_data.dart';
 import 'package:a3_music/models/character.dart';
 import 'package:a3_music/services/services.dart';
 import 'package:flutter/material.dart';
@@ -35,8 +36,10 @@ class _HomeScreenState extends State<HomeScreen> {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) =>
-                        SongsListScreen(character: character)));
+                    builder: (context) => SongsListScreen(
+                          character: character,
+                          listOfSongs: songsList,
+                        )));
           },
           child: Padding(
             padding: const EdgeInsets.all(3.0),
