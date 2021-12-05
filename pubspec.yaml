@@ -64,7 +64,14 @@ flutter:
   assets:
     - assets/images/characters/faces/
     - assets/images/characters/glitter/
+    - assets/images/characters/chibi/
     - assets/images/song_covers/
+    - assets/images/song_covers/character_song/
+    - assets/images/song_covers/mixed_troupe/
+    - assets/images/song_covers/troupe_song/spring/
+    - assets/images/song_covers/troupe_song/summer/
+    - assets/images/song_covers/troupe_song/autumn/
+    - assets/images/song_covers/troupe_song/winter/
     - assets/music/
 
   # An image asset can refer to one or more resolution-specific "variants", see

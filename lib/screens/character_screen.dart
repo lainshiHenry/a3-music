@@ -29,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Widget> buildCharacterList() {
     List<Widget> _resultList = List.empty(growable: true);
     for (var character in characterList) {
-      if (character.assetImageLocation != '') {
+      if (character.chibiAssetImageLocation != '') {
         _resultList.add(GestureDetector(
           onTap: () {
             print(character.firstName! + ' was pressed');
@@ -61,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Text('A3 Music Player'),
         centerTitle: true,
       ),
-      backgroundColor: Colors.green,
+      // backgroundColor: Colors.green,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -124,9 +124,11 @@ class TopRowCircleCharacterIcon extends StatelessWidget {
       width: 100,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
+        color: Colors.pink[100],
         image: DecorationImage(
           fit: BoxFit.contain,
-          image: Image.asset(character!.assetImageLocation.toString()).image,
+          image:
+              Image.asset(character!.chibiAssetImageLocation.toString()).image,
         ),
       ),
     );

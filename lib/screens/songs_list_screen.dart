@@ -33,6 +33,17 @@ class SongsListScreen extends StatelessWidget {
         child: GestureDetector(
           onTap: () {
             print(element.songName);
+            showModalBottomSheet(
+              context: context,
+              builder: (BuildContext context) {
+                return Container(
+                  height: 100,
+                  child: Center(
+                    child: Text(element.songName!),
+                  ),
+                );
+              },
+            );
           },
           child: Container(
             height: 100,

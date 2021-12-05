@@ -30,6 +30,7 @@ class Character {
   String? lastName;
   String? assetImageLocation;
   String? glitterAssetImageLocation;
+  String? chibiAssetImageLocation;
   String? troupe;
   Actor? actor;
 
@@ -38,6 +39,7 @@ class Character {
     this.lastName = '',
     this.assetImageLocation = '',
     this.glitterAssetImageLocation = '',
+    this.chibiAssetImageLocation = '',
     this.troupe = '',
     this.actor,
   });

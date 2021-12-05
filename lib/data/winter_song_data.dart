@@ -7,7 +7,7 @@ List<Song> winterTroupeSongs = [
     playName: 'Sympathy for the Angel',
     songAudioFileLocation: 'assets/music/dont_cry.mp3',
     posterImageFileLocation:
-        'assets/images/song_covers/Sympathy_for_the_Angel_Poster.png',
+        'assets/images/song_covers/troupe_song/winter/Sympathy_for_the_Angel_Poster.png',
     singers: [Actor.tsumugi, Actor.tasuku],
   ),
 ];
