@@ -31,6 +31,7 @@ class Character {
   String? assetImageLocation;
   String? glitterAssetImageLocation;
   String? chibiAssetImageLocation;
+  String? fullBodyAssetImageLocation;
   String? troupe;
   Actor? actor;
 
@@ -40,6 +41,7 @@ class Character {
     this.assetImageLocation = '',
     this.glitterAssetImageLocation = '',
     this.chibiAssetImageLocation = '',
+    this.fullBodyAssetImageLocation = '',
     this.troupe = '',
     this.actor,
   });
