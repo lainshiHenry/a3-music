@@ -5,7 +5,7 @@ List<Song> springTroupeSongs = [
   Song(
     songName: 'Bokura no Kizuna',
     playName: 'Romeo & Julius',
-    songAudioFileLocation: '',
+    songAudioFileLocation: 'music/bokura_no_kizuna.mp3',
     posterImageFileLocation:
         'assets/images/song_covers/troupe_song/spring/bokura_no_izuna.jpg',
     singers: [Actor.sakuya, Actor.masumi],

@@ -1,10 +1,9 @@
 import 'package:a3_music/data/character_data.dart';
 import 'package:a3_music/data/song_data.dart';
 import 'package:a3_music/models/character.dart';
+import 'package:a3_music/screens/songs_list_screen.dart';
 import 'package:a3_music/services/services.dart';
 import 'package:flutter/material.dart';
-
-import 'songs_list_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   static String id = 'home_screen';
@@ -30,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
       if (character.chibiAssetImageLocation != '') {
         _resultList.add(GestureDetector(
           onTap: () {
-            print(character.firstName! + ' was pressed');
+            //print(character.firstName! + ' was pressed');
             Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -55,10 +54,6 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('A3 Music Player'),
-        centerTitle: true,
-      ),
       // backgroundColor: Colors.green,
       body: SafeArea(
         child: Padding(
