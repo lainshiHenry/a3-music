@@ -10,4 +10,27 @@ List<Song> winterTroupeSongs = [
         'assets/images/song_covers/troupe_song/winter/Sympathy_for_the_Angel_Poster.png',
     singers: [Actor.tsumugi, Actor.tasuku],
   ),
+  Song(
+    songName: 'To Bloom',
+    songAudioFileLocation: 'music/to_bloom.mp3',
+    singers: [
+      Actor.tsumugi,
+      Actor.tasuku,
+      Actor.hisoka,
+      Actor.homare,
+      Actor.azuma
+    ],
+  ),
+  Song(
+    songName: 'Precious To Us',
+    songAudioFileLocation: 'music/precious_to_us.mp3',
+    singers: [
+      Actor.tsumugi,
+      Actor.tasuku,
+      Actor.hisoka,
+      Actor.homare,
+      Actor.azuma,
+      Actor.guy
+    ],
+  ),
 ];

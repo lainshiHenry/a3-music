@@ -1,6 +1,7 @@
 import 'package:audioplayers/audioplayers.dart';
+import 'package:flutter/material.dart';
 
-class AudioFunctions {
+class AudioFunctions extends ChangeNotifier {
   final AudioPlayer _audioPlayerInstance = AudioPlayer();
   AudioCache player = AudioCache();
 
@@ -18,6 +19,7 @@ class AudioFunctions {
       getAudioPlayerState() == PlayerState.PLAYING
           ? _audioPlayerInstance.resume()
           : await player.play(musicLocation!);
+      notifyListeners();
       return true;
     } on Exception catch (e) {
       print(e);

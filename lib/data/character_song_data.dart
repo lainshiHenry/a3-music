@@ -16,4 +16,9 @@ List<Song> characterSongs = [
         'assets/images/song_covers/character_song/my_dictionary.png',
     singers: [Actor.sakuya],
   ),
+  Song(
+    songName: 'Gamer\'s High',
+    singers: [Actor.itaru],
+    songAudioFileLocation: 'music/gamers_high.mp3',
+  ),
 ];

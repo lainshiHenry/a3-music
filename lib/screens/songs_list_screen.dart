@@ -1,19 +1,28 @@
 import 'package:a3_music/data/constants.dart';
 import 'package:a3_music/models/character.dart';
 import 'package:a3_music/models/song.dart';
+import 'package:a3_music/models/song_list_model.dart';
 import 'package:a3_music/services/music_album_services.dart';
-import 'package:a3_music/services/theme_colour.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:provider/provider.dart';
 
 class SongsListScreen extends StatelessWidget {
   final Character character;
-  final ThemeColour _themeColour = ThemeColour();
   final List<Song> listOfSongs;
-  final MusicAlbumService _musicAlbumService = MusicAlbumService();
+  final Function updateSongCallbackFunction;
 
+  final MusicAlbumService _musicAlbumService = MusicAlbumService();
   final List<Song> listOfFilteredSongs = List.empty(growable: true);
   final List<Widget> listToBuild = List.empty(growable: true);
   final List<bool> isPlayingList = List.empty(growable: true);
+
+  SongsListScreen({
+    Key? key,
+    required this.character,
+    required this.listOfSongs,
+    required this.updateSongCallbackFunction,
+  }) : super(key: key);
 
   void init() {
     for (var songElement in listOfSongs) {
@@ -31,8 +40,17 @@ class SongsListScreen extends StatelessWidget {
         ListTile(
           leading: Image(
             image: AssetImage(element.posterImageFileLocation!),
+            width: 120,
+            //height: 150,
+            fit: BoxFit.fitHeight,
           ),
-          title: Text(element.songName!),
+          title: Text(
+            element.songName!,
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 18,
+            ),
+          ),
           trailing: MusicPlayPauseButton(
             song: element,
             isPlayingL: isPlayingList,
@@ -44,13 +62,17 @@ class SongsListScreen extends StatelessWidget {
     }
   }
 
-  SongsListScreen(
-      {Key? key, required this.character, required this.listOfSongs})
-      : super(key: key);
-
   @override
   Widget build(BuildContext context) {
-    init();
+    Song currentSongPlaying =
+        Provider.of<SongListModel>(context).getCurrentSong;
+
+    print(currentSongPlaying);
+    print(currentSongPlaying.posterImageFileLocation);
+
+    if (listOfFilteredSongs.isEmpty) {
+      init();
+    }
     return Scaffold(
       body: SafeArea(
         child: Row(
@@ -67,6 +89,11 @@ class SongsListScreen extends StatelessWidget {
                   color: Colors.white,
                   iconSize: 30.0,
                   onPressed: () {
+                    var data = Provider.of<SongListModel>(
+                      context,
+                      listen: false,
+                    ).getCurrentSong;
+                    print(data.songName);
                     audioPlayer.stopSong();
                     Navigator.pop(context);
                   },
@@ -77,20 +104,20 @@ class SongsListScreen extends StatelessWidget {
               ),
             ),
             Center(
-              child: Image(
-                image: AssetImage(character.assetImageLocation!),
+              // child: LeftSideImageWidget(
+              //     imageString: currentSongPlaying.posterImageFileLocation!),
+              child: LeftSideImageWidget(
+                imageString: currentSongPlaying.posterImageFileLocation !=
+                        'assets/images/a3_logo.png'
+                    ? currentSongPlaying.posterImageFileLocation!
+                    : character.assetImageLocation!,
               ),
             ),
             const Spacer(),
             Center(
-              child: Container(
-                decoration: BoxDecoration(
-                  border: Border.all(),
-                ),
-                constraints: const BoxConstraints(
-                  maxWidth: 300,
-                  maxHeight: 300,
-                ),
+              child: SizedBox(
+                width: 400,
+                height: 300,
                 child: ListView(
                   children: listToBuild,
                   shrinkWrap: true,
@@ -101,6 +128,31 @@ class SongsListScreen extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class LeftSideImageWidget extends StatefulWidget {
+  const LeftSideImageWidget({
+    Key? key,
+    required this.imageString,
+  }) : super(key: key);
+
+  final String imageString;
+
+  @override
+  State<LeftSideImageWidget> createState() => _LeftSideImageWidgetState();
+}
+
+class _LeftSideImageWidgetState extends State<LeftSideImageWidget> {
+  @override
+  Widget build(BuildContext context) {
+    print(widget.imageString);
+    return Image(
+      image: AssetImage(widget.imageString),
+      height: 200,
+      width: 200,
+      fit: BoxFit.fitWidth,
     );
   }
 }
@@ -132,15 +184,25 @@ class _MusicPlayPauseButtonState extends State<MusicPlayPauseButton> {
             await audioPlayer.playSong(
                 musicLocation: widget.song.songAudioFileLocation);
             widget.isPlaying = true;
+            //widget.songUpdateCallbackFunction(widget.song);
             widget.isPlayingL[widget.index] = true;
+            Provider.of<SongListModel>(
+              context,
+              listen: false,
+            ).setCurrentSong(widget.song);
+
             setState(() {});
           } else if (widget.isPlaying) {
             audioPlayer.pauseSong();
             widget.isPlaying = false;
             widget.isPlayingL[widget.index] = false;
+            //widget.songUpdateCallbackFunction(Song());
+            Provider.of<SongListModel>(
+              context,
+              listen: false,
+            ).setCurrentSong(Song());
             setState(() {});
           }
-          print(widget.isPlayingL);
         },
         icon: Icon(
           //widget.isPlaying ? Icons.pause : Icons.play_arrow,
