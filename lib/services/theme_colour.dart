@@ -11,16 +11,16 @@ class ThemeColour {
     Color? winterTroupeColour = Colors.blue;
 
     switch (character.troupe) {
-      case 'Spring':
+      case Troupe.spring:
         return springTroupeColour!;
 
-      case 'Summer':
+      case Troupe.summer:
         return summerTroupeColour!;
 
-      case 'Autumn':
+      case Troupe.autumn:
         return autumnTroupeColour;
 
-      case 'Winter':
+      case Troupe.winter:
         return winterTroupeColour;
 
       default:

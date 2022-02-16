@@ -71,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: GridView.count(
-            crossAxisCount: 4,
+            crossAxisCount: 6,
             scrollDirection: Axis.vertical,
             children: buildCharacterList(Song()),
           ),

@@ -21,4 +21,11 @@ List<Song> characterSongs = [
     singers: [Actor.itaru],
     songAudioFileLocation: 'music/gamers_high.mp3',
   ),
+  Song(
+    songName: 'エモーション | Emotion',
+    singers: [Actor.homare],
+    posterImageFileLocation:
+        'assets/images/song_covers/character_song/emotion.png',
+    songAudioFileLocation: 'music/emotion.mp3',
+  ),
 ];

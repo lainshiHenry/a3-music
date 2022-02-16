@@ -1,17 +1,25 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ca.henryle.a3_music">
-    <application
-        android:label="a3_music"
-        android:icon="@mipmap/ic_launcher"
-        >
+    package="ca.henryle.a3_music"
+    android:versionCode='1'
+    android:versionName='1.0'
+    >
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application
+        android:requestLegacyExternalStorage="true"
+        >
         <activity
-            android:name=".MainActivity"
+            android:label="a3_music"
+            android:icon="@mipmap/ic_launcher"
+            android:name="ca.henryle.a3_music.MainActivity"
+            android:exported="true"
+
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:hardwareAccelerated="true"
-            android:exported="false"
+
             android:windowSoftInputMode="adjustResize">
             <!-- Specifies an Android theme to apply to this Activity as soon as
                  the Android process has started. This theme is visible to the user

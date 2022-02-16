@@ -1,3 +1,11 @@
+enum Troupe {
+  spring,
+  summer,
+  autumn,
+  winter,
+  other,
+}
+
 enum Actor {
   sakuya,
   masumi,
@@ -23,6 +31,7 @@ enum Actor {
   homare,
   azuma,
   guy,
+  izumi,
 }
 
 class Character {
@@ -32,7 +41,7 @@ class Character {
   String? glitterAssetImageLocation;
   String? chibiAssetImageLocation;
   String? fullBodyAssetImageLocation;
-  String? troupe;
+  Troupe troupe;
   Actor? actor;
 
   Character({
@@ -42,7 +51,7 @@ class Character {
     this.glitterAssetImageLocation = '',
     this.chibiAssetImageLocation = '',
     this.fullBodyAssetImageLocation = '',
-    this.troupe = '',
+    this.troupe = Troupe.other,
     this.actor,
   });
 }
