@@ -3,6 +3,7 @@ import 'package:a3_music/models/lines.dart';
 import 'package:a3_music/models/song_list_model.dart';
 import 'package:a3_music/screens/character_screen.dart';
 import 'package:a3_music/screens/character_screen_2.dart';
+import 'package:a3_music/screens/home_page.dart';
 import 'package:a3_music/screens/story/story_conversation_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -42,12 +43,13 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      initialRoute: 'HomeScreen2',
+      initialRoute: '/',
       // initialRoute: 'StoryConversationScreen',
       routes: {
-        '/': (context) => const HomeScreen(),
+        '/': (context) => HomePage(),
         HomeScreen.id: (context) => const HomeScreen(),
         'HomeScreen2': (context) => const HomeScreen2(),
+        'HomePage': (context) => HomePage(),
         'StoryConversationScreen': (context) => StoryConversationScreen(
               storyLine: [
                 Line(

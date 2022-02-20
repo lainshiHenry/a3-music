@@ -41,6 +41,7 @@ class Character {
   String? glitterAssetImageLocation;
   String? chibiAssetImageLocation;
   String? fullBodyAssetImageLocation;
+  String? characterSelectionImageLocation;
   Troupe troupe;
   Actor? actor;
 
@@ -51,6 +52,7 @@ class Character {
     this.glitterAssetImageLocation = '',
     this.chibiAssetImageLocation = '',
     this.fullBodyAssetImageLocation = '',
+    this.characterSelectionImageLocation = '',
     this.troupe = Troupe.other,
     this.actor,
   });

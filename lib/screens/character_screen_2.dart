@@ -1,10 +1,8 @@
-import 'package:a3_music/data/character_data.dart';
-import 'package:a3_music/data/song_data.dart';
 import 'package:a3_music/models/character.dart';
 import 'package:a3_music/models/lines.dart';
-import 'package:a3_music/screens/songs_list_screen.dart';
 import 'package:a3_music/screens/story/story_conversation_screen.dart';
 import 'package:a3_music/services/services.dart';
+import 'package:a3_music/widget/character_selection_page.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen2 extends StatefulWidget {
@@ -18,6 +16,12 @@ class _HomeScreen2State extends State<HomeScreen2> {
   final Services _services = Services();
   int _currentPage = 0;
   final PageController _pageController = PageController(initialPage: 0);
+  List<String> _troupeHeaderImageBanner = [
+    'assets/images/app_images/Spring/Spring Troupe.png',
+    'assets/images/app_images/Summer/Summer Troupe.png',
+    'assets/images/app_images/Autumn/Autumn Troupe.png',
+    'assets/images/app_images/Winter/Winter Troupe.png'
+  ];
 
   @override
   void initState() {
@@ -42,7 +46,9 @@ class _HomeScreen2State extends State<HomeScreen2> {
               flex: 1,
             ),
             IconButton(
-                icon: const Icon(Icons.arrow_back_ios),
+                icon: const ImageIcon(
+                  AssetImage('assets/images/app_images/Left Click.png'),
+                ),
                 onPressed: () {
                   _pageController.previousPage(
                       duration: const Duration(milliseconds: 100),
@@ -61,26 +67,31 @@ class _HomeScreen2State extends State<HomeScreen2> {
                   CharacterSelectionPage(
                     pageIndex: 0,
                     remainingWidth: MediaQuery.of(context).size.width - 200,
+                    bannerImageLocation: _troupeHeaderImageBanner[0],
                   ),
                   CharacterSelectionPage(
                     pageIndex: 1,
                     remainingWidth: MediaQuery.of(context).size.width - 200,
+                    bannerImageLocation: _troupeHeaderImageBanner[1],
                   ),
                   CharacterSelectionPage(
                     pageIndex: 2,
                     remainingWidth: MediaQuery.of(context).size.width - 200,
+                    bannerImageLocation: _troupeHeaderImageBanner[2],
                   ),
                   CharacterSelectionPage(
                     pageIndex: 3,
                     remainingWidth: MediaQuery.of(context).size.width - 200,
+                    bannerImageLocation: _troupeHeaderImageBanner[3],
                   ),
                 ],
               ),
             ),
             IconButton(
-              icon: const Icon(Icons.arrow_forward_ios),
+              icon: const ImageIcon(
+                AssetImage('assets/images/app_images/Right Click.png'),
+              ),
               onPressed: () {
-                print('current page ' + _pageController.page.toString());
                 _pageController.nextPage(
                     duration: const Duration(milliseconds: 100),
                     curve: Curves.ease);
@@ -107,7 +118,7 @@ class _HomeScreen2State extends State<HomeScreen2> {
                       color: Colors.grey,
                       width: 80,
                       height: 50,
-                      child: Center(child: Text('Spring')),
+                      child: const Center(child: Text('Spring')),
                     ),
                   ),
                   GestureDetector(
@@ -120,7 +131,7 @@ class _HomeScreen2State extends State<HomeScreen2> {
                       color: Colors.grey,
                       width: 80,
                       height: 50,
-                      child: Center(child: Text('Summer')),
+                      child: const Center(child: Text('Summer')),
                     ),
                   ),
                   GestureDetector(
@@ -133,7 +144,7 @@ class _HomeScreen2State extends State<HomeScreen2> {
                       color: Colors.grey,
                       width: 80,
                       height: 50,
-                      child: Center(child: Text('Autumn')),
+                      child: const Center(child: Text('Autumn')),
                     ),
                   ),
                   GestureDetector(
@@ -146,7 +157,7 @@ class _HomeScreen2State extends State<HomeScreen2> {
                       color: Colors.grey,
                       width: 80,
                       height: 50,
-                      child: Center(child: Text('Winter')),
+                      child: const Center(child: Text('Winter')),
                     ),
                   ),
                   GestureDetector(
@@ -201,7 +212,7 @@ class _HomeScreen2State extends State<HomeScreen2> {
                       color: Colors.grey,
                       width: 80,
                       height: 50,
-                      child: Center(child: Text('Story')),
+                      child: const Center(child: Text('Story')),
                     ),
                   ),
                 ],
@@ -210,93 +221,6 @@ class _HomeScreen2State extends State<HomeScreen2> {
           ],
         ),
       ),
-    );
-  }
-}
-
-class CharacterSelectionPage extends StatelessWidget {
-  final int _pageIndex;
-  final double _remainingWidth;
-  const CharacterSelectionPage(
-      {Key? key, required int pageIndex, required double remainingWidth})
-      : _pageIndex = pageIndex,
-        _remainingWidth = remainingWidth,
-        super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        CharacterRowItem(
-          index: (0 + (6 * _pageIndex)),
-          width: _remainingWidth / 6,
-        ),
-        CharacterRowItem(
-          index: (1 + (6 * _pageIndex)),
-          width: _remainingWidth / 6,
-        ),
-        CharacterRowItem(
-          index: (2 + (6 * _pageIndex)),
-          width: _remainingWidth / 6,
-        ),
-        CharacterRowItem(
-          index: (3 + (6 * _pageIndex)),
-          width: _remainingWidth / 6,
-        ),
-        CharacterRowItem(
-          index: (4 + (6 * _pageIndex)),
-          width: _remainingWidth / 6,
-        ),
-        CharacterRowItem(
-          index: (5 + (6 * _pageIndex)),
-          width: _remainingWidth / 6,
-        ),
-      ],
-    );
-  }
-}
-
-class CharacterRowItem extends StatelessWidget {
-  final int _index;
-  final double _width;
-
-  const CharacterRowItem({
-    required int index,
-    double width = 75.0,
-    Key? key,
-  })  : _index = index,
-        _width = width,
-        super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      child: Container(
-        decoration: BoxDecoration(
-          border: Border.all(),
-          image: DecorationImage(
-            image: AssetImage(characterList[_index].assetImageLocation!),
-          ),
-        ),
-        height: 300,
-        width: _width,
-        child: Text(
-          characterList[_index].firstName!,
-          softWrap: true,
-        ),
-      ),
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => SongsListScreen(
-              character: characterList[_index],
-              listOfSongs: songsList,
-              updateSongCallbackFunction: () {},
-            ),
-          ),
-        );
-      },
     );
   }
 }

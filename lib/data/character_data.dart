@@ -13,6 +13,8 @@ List<Character> springTroupe = [
         'assets/images/characters/glitter/sakuya_glitter.png',
     chibiAssetImageLocation: 'assets/images/characters/chibi/sakuya_chibi.png',
     fullBodyAssetImageLocation: 'assets/images/characters/fullbody/sakuya.png',
+    characterSelectionImageLocation:
+        'assets/images/app_images/Spring/Sakuya.png',
   ),
   Character(
     actor: Actor.masumi,
@@ -23,6 +25,8 @@ List<Character> springTroupe = [
     glitterAssetImageLocation:
         'assets/images/characters/glitter/masumi_glitter.png',
     chibiAssetImageLocation: 'assets/images/characters/chibi/masumi_chibi.png',
+    characterSelectionImageLocation:
+        'assets/images/app_images/Spring/Masumi.png',
   ),
   Character(
     actor: Actor.tsuzuru,
@@ -33,6 +37,8 @@ List<Character> springTroupe = [
     glitterAssetImageLocation:
         'assets/images/characters/glitter/tsuzuru_glitter.png',
     chibiAssetImageLocation: 'assets/images/characters/chibi/tsuzuru_chibi.png',
+    characterSelectionImageLocation:
+        'assets/images/app_images/Spring/Tsuzuru.png',
   ),
   Character(
     actor: Actor.itaru,
@@ -42,6 +48,8 @@ List<Character> springTroupe = [
     troupe: Troupe.spring,
     glitterAssetImageLocation: '',
     chibiAssetImageLocation: 'assets/images/characters/chibi/itaru_chibi.png',
+    characterSelectionImageLocation:
+        'assets/images/app_images/Spring/Itaru.png',
   ),
   Character(
     actor: Actor.citron,
@@ -51,6 +59,8 @@ List<Character> springTroupe = [
     troupe: Troupe.spring,
     glitterAssetImageLocation: '',
     chibiAssetImageLocation: 'assets/images/characters/chibi/citron_chibi.png',
+    characterSelectionImageLocation:
+        'assets/images/app_images/Spring/Citron.png',
   ),
   Character(
     actor: Actor.chikage,
@@ -60,6 +70,8 @@ List<Character> springTroupe = [
     troupe: Troupe.spring,
     glitterAssetImageLocation: '',
     chibiAssetImageLocation: 'assets/images/characters/chibi/chikage_chibi.png',
+    characterSelectionImageLocation:
+        'assets/images/app_images/Spring/Chikage.png',
   ),
 ];
 
@@ -72,6 +84,8 @@ List<Character> summerTroupe = [
     troupe: Troupe.summer,
     glitterAssetImageLocation: '',
     chibiAssetImageLocation: 'assets/images/characters/chibi/tenma_chibi.png',
+    characterSelectionImageLocation:
+        'assets/images/app_images/Summer/Tenma.png',
   ),
   Character(
     actor: Actor.yuki,
@@ -81,6 +95,7 @@ List<Character> summerTroupe = [
     troupe: Troupe.summer,
     glitterAssetImageLocation: '',
     chibiAssetImageLocation: 'assets/images/characters/chibi/yuki_chibi.png',
+    characterSelectionImageLocation: 'assets/images/app_images/Summer/Yuki.png',
   ),
   Character(
     actor: Actor.muku,
@@ -90,6 +105,7 @@ List<Character> summerTroupe = [
     troupe: Troupe.summer,
     glitterAssetImageLocation: '',
     chibiAssetImageLocation: 'assets/images/characters/chibi/muku_chibi.png',
+    characterSelectionImageLocation: 'assets/images/app_images/Summer/Muku.png',
   ),
   Character(
     actor: Actor.misumi,
@@ -99,6 +115,8 @@ List<Character> summerTroupe = [
     troupe: Troupe.summer,
     glitterAssetImageLocation: '',
     chibiAssetImageLocation: 'assets/images/characters/chibi/misumi_chibi.png',
+    characterSelectionImageLocation:
+        'assets/images/app_images/Summer/Misumi.png',
   ),
   Character(
     actor: Actor.kazunari,
@@ -109,6 +127,8 @@ List<Character> summerTroupe = [
     glitterAssetImageLocation: '',
     chibiAssetImageLocation:
         'assets/images/characters/chibi/kazunari_chibi.png',
+    characterSelectionImageLocation:
+        'assets/images/app_images/Summer/Kazunari.png',
   ),
   Character(
     actor: Actor.kumon,
@@ -118,6 +138,8 @@ List<Character> summerTroupe = [
     troupe: Troupe.summer,
     glitterAssetImageLocation: '',
     chibiAssetImageLocation: 'assets/images/characters/chibi/kumon_chibi.png',
+    characterSelectionImageLocation:
+        'assets/images/app_images/Summer/Kumon.png',
   ),
 ];
 
@@ -130,6 +152,8 @@ List<Character> autumnTroupe = [
     troupe: Troupe.autumn,
     glitterAssetImageLocation: '',
     chibiAssetImageLocation: 'assets/images/characters/chibi/banri_chibi.png',
+    characterSelectionImageLocation:
+        'assets/images/app_images/Autumn/Banri.png',
   ),
   Character(
     actor: Actor.juza,
@@ -139,6 +163,7 @@ List<Character> autumnTroupe = [
     troupe: Troupe.autumn,
     glitterAssetImageLocation: '',
     chibiAssetImageLocation: 'assets/images/characters/chibi/juza_chibi.png',
+    characterSelectionImageLocation: 'assets/images/app_images/Autumn/Juza.png',
   ),
   Character(
     actor: Actor.taichi,
@@ -148,6 +173,8 @@ List<Character> autumnTroupe = [
     troupe: Troupe.autumn,
     glitterAssetImageLocation: '',
     chibiAssetImageLocation: 'assets/images/characters/chibi/taichi_chibi.png',
+    characterSelectionImageLocation:
+        'assets/images/app_images/Autumn/Taichi.png',
   ),
   Character(
     actor: Actor.omi,
@@ -157,6 +184,7 @@ List<Character> autumnTroupe = [
     troupe: Troupe.autumn,
     glitterAssetImageLocation: '',
     chibiAssetImageLocation: 'assets/images/characters/chibi/omi_chibi.png',
+    characterSelectionImageLocation: 'assets/images/app_images/Autumn/Omi.png',
   ),
   Character(
     actor: Actor.sakyo,
@@ -166,6 +194,8 @@ List<Character> autumnTroupe = [
     troupe: Troupe.autumn,
     glitterAssetImageLocation: '',
     chibiAssetImageLocation: 'assets/images/characters/chibi/sakyo_chibi.png',
+    characterSelectionImageLocation:
+        'assets/images/app_images/Autumn/Sakyo.png',
   ),
   Character(
     actor: Actor.azami,
@@ -175,6 +205,8 @@ List<Character> autumnTroupe = [
     troupe: Troupe.autumn,
     glitterAssetImageLocation: '',
     chibiAssetImageLocation: 'assets/images/characters/chibi/azami_chibi.png',
+    characterSelectionImageLocation:
+        'assets/images/app_images/Autumn/Azami.png',
   ),
 ];
 List<Character> winterTroupe = [
@@ -187,7 +219,9 @@ List<Character> winterTroupe = [
         'assets/images/characters/glitter/tsumugi_glitter.png',
     troupe: Troupe.winter,
     chibiAssetImageLocation: 'assets/images/characters/chibi/tsumugi_chibi.png',
-    fullBodyAssetImageLocation: 'assets/images/characters/fullbody/sakuya.png',
+    fullBodyAssetImageLocation: 'assets/images/characters/fullbody/tsumugi.png',
+    characterSelectionImageLocation:
+        'assets/images/app_images/Winter/Tsumugi.png',
   ),
   Character(
     actor: Actor.tasuku,
@@ -197,6 +231,8 @@ List<Character> winterTroupe = [
     troupe: Troupe.winter,
     glitterAssetImageLocation: '',
     chibiAssetImageLocation: 'assets/images/characters/chibi/tasuku_chibi.png',
+    characterSelectionImageLocation:
+        'assets/images/app_images/Winter/Tasuku.png',
   ),
   Character(
     actor: Actor.hisoka,
@@ -206,6 +242,8 @@ List<Character> winterTroupe = [
     troupe: Troupe.winter,
     glitterAssetImageLocation: '',
     chibiAssetImageLocation: 'assets/images/characters/chibi/hisoka_chibi.png',
+    characterSelectionImageLocation:
+        'assets/images/app_images/Winter/Hisoka.png',
   ),
   Character(
     actor: Actor.homare,
@@ -215,6 +253,8 @@ List<Character> winterTroupe = [
     troupe: Troupe.winter,
     glitterAssetImageLocation: '',
     chibiAssetImageLocation: 'assets/images/characters/chibi/homare_chibi.png',
+    characterSelectionImageLocation:
+        'assets/images/app_images/Winter/Homare.png',
   ),
   Character(
     actor: Actor.azuma,
@@ -224,6 +264,8 @@ List<Character> winterTroupe = [
     troupe: Troupe.winter,
     glitterAssetImageLocation: '',
     chibiAssetImageLocation: 'assets/images/characters/chibi/azuma_chibi.png',
+    characterSelectionImageLocation:
+        'assets/images/app_images/Winter/Azuma.png',
   ),
   Character(
     actor: Actor.guy,
@@ -233,5 +275,6 @@ List<Character> winterTroupe = [
     troupe: Troupe.winter,
     glitterAssetImageLocation: '',
     chibiAssetImageLocation: 'assets/images/characters/chibi/guy_chibi.png',
+    characterSelectionImageLocation: 'assets/images/app_images/Winter/Guy.png',
   ),
 ];
