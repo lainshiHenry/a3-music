@@ -1,65 +1,83 @@
+import 'package:a3_music/widget/bottom_navigation_menu_item.dart';
 import 'package:flutter/material.dart';
 
-class MainBottomNavigationBar extends StatelessWidget {
-  final int _currentNavigationPosition;
-
-  const MainBottomNavigationBar({Key? key, required int currentPosition})
-      : _currentNavigationPosition = currentPosition,
+class BottomNavigationMenuSection extends StatelessWidget {
+  const BottomNavigationMenuSection({
+    Key? key,
+    required PageController mainMenuPageController,
+  })  : _mainMenuPageController = mainMenuPageController,
         super(key: key);
+
+  final PageController _mainMenuPageController;
+
+  final Curve _pageControllerCurves = Curves.ease;
+  final Duration _pageControllerDuration = const Duration(milliseconds: 500);
 
   @override
   Widget build(BuildContext context) {
-    // return SizedBox(
-    //   child: Row(
-    //     mainAxisAlignment: MainAxisAlignment.center,
-    //     children: [
-    //       Container(
-    //         color: Colors.blue,
-    //         height: 50,
-    //         width: 50,
-    //       ),
-    //       Container(
-    //         color: Colors.yellow,
-    //         height: 50,
-    //         width: 50,
-    //       ),
-    //       Container(
-    //         color: Colors.blue,
-    //         height: 50,
-    //         width: 50,
-    //       ),
-    //       Container(
-    //         color: Colors.red,
-    //         height: 50,
-    //         width: 150,
-    //       ),
-    //       Container(
-    //         color: Colors.yellow,
-    //         height: 50,
-    //         width: 50,
-    //       ),
-    //       Container(
-    //         color: Colors.blue,
-    //         height: 50,
-    //         width: 50,
-    //       ),
-    //       Container(
-    //         color: Colors.yellow,
-    //         height: 50,
-    //         width: 50,
-    //       ),
-    //     ],
-    //   ),
-    // );
-    return BottomNavigationBar(
-      type: BottomNavigationBarType.fixed,
-      showSelectedLabels: false,
-      items: [
-        BottomNavigationBarItem(
-            icon: ImageIcon(AssetImage('assets/images/app_images/Home.png')),
-            label: ''),
-        BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 81.5, vertical: 0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          BottomNavigationItem(
+            assetImageLocation: 'assets/images/app_images/Home.png',
+            onTapFunction: () {
+              _mainMenuPageController.animateToPage(0,
+                  duration: _pageControllerDuration,
+                  curve: _pageControllerCurves);
+            },
+          ),
+          BottomNavigationItem(
+            assetImageLocation: 'assets/images/app_images/Story.png',
+            onTapFunction: () {
+              _mainMenuPageController.animateToPage(1,
+                  duration: _pageControllerDuration,
+                  curve: _pageControllerCurves);
+            },
+          ),
+          BottomNavigationItem(
+            assetImageLocation: 'assets/images/app_images/Actors.png',
+            onTapFunction: () {
+              _mainMenuPageController.animateToPage(2,
+                  duration: _pageControllerDuration,
+                  curve: _pageControllerCurves);
+            },
+          ),
+          BottomNavigationItem(
+            assetImageLocation: 'assets/images/app_images/Plays.png',
+            onTapFunction: () {
+              _mainMenuPageController.animateToPage(3,
+                  duration: _pageControllerDuration,
+                  curve: _pageControllerCurves);
+            },
+          ),
+          BottomNavigationItem(
+            assetImageLocation: 'assets/images/app_images/Earn Cash.png',
+            onTapFunction: () {
+              _mainMenuPageController.animateToPage(4,
+                  duration: _pageControllerDuration,
+                  curve: _pageControllerCurves);
+            },
+          ),
+          BottomNavigationItem(
+            assetImageLocation: 'assets/images/app_images/Tryouts.png',
+            onTapFunction: () {
+              _mainMenuPageController.animateToPage(5,
+                  duration: _pageControllerDuration,
+                  curve: _pageControllerCurves);
+            },
+          ),
+          BottomNavigationItem(
+            assetImageLocation: 'assets/images/app_images/Menu.png',
+            onTapFunction: () {
+              _mainMenuPageController.animateToPage(6,
+                  duration: _pageControllerDuration,
+                  curve: _pageControllerCurves);
+            },
+          ),
+        ],
+      ),
     );
   }
 }
