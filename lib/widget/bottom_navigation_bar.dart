@@ -15,67 +15,73 @@ class BottomNavigationMenuSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 81.5, vertical: 0),
+    return SizedBox(
+      width: MediaQuery.of(context).size.width,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          BottomNavigationItem(
-            assetImageLocation: 'assets/images/app_images/Home.png',
-            onTapFunction: () {
-              _mainMenuPageController.animateToPage(0,
-                  duration: _pageControllerDuration,
-                  curve: _pageControllerCurves);
-            },
+          const Spacer(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              BottomNavigationItem(
+                assetImageLocation: 'assets/images/app_images/Home.png',
+                onTapFunction: () {
+                  _mainMenuPageController.animateToPage(0,
+                      duration: _pageControllerDuration,
+                      curve: _pageControllerCurves);
+                },
+              ),
+              BottomNavigationItem(
+                assetImageLocation: 'assets/images/app_images/Story.png',
+                onTapFunction: () {
+                  _mainMenuPageController.animateToPage(1,
+                      duration: _pageControllerDuration,
+                      curve: _pageControllerCurves);
+                },
+              ),
+              BottomNavigationItem(
+                assetImageLocation: 'assets/images/app_images/Actors.png',
+                onTapFunction: () {
+                  _mainMenuPageController.animateToPage(2,
+                      duration: _pageControllerDuration,
+                      curve: _pageControllerCurves);
+                },
+              ),
+              BottomNavigationItem(
+                assetImageLocation: 'assets/images/app_images/Plays.png',
+                onTapFunction: () {
+                  _mainMenuPageController.animateToPage(3,
+                      duration: _pageControllerDuration,
+                      curve: _pageControllerCurves);
+                },
+              ),
+              BottomNavigationItem(
+                assetImageLocation: 'assets/images/app_images/Earn Cash.png',
+                onTapFunction: () {
+                  _mainMenuPageController.animateToPage(4,
+                      duration: _pageControllerDuration,
+                      curve: _pageControllerCurves);
+                },
+              ),
+              BottomNavigationItem(
+                assetImageLocation: 'assets/images/app_images/Tryouts.png',
+                onTapFunction: () {
+                  _mainMenuPageController.animateToPage(5,
+                      duration: _pageControllerDuration,
+                      curve: _pageControllerCurves);
+                },
+              ),
+              BottomNavigationItem(
+                assetImageLocation: 'assets/images/app_images/Menu.png',
+                onTapFunction: () {
+                  _mainMenuPageController.animateToPage(6,
+                      duration: _pageControllerDuration,
+                      curve: _pageControllerCurves);
+                },
+              ),
+            ],
           ),
-          BottomNavigationItem(
-            assetImageLocation: 'assets/images/app_images/Story.png',
-            onTapFunction: () {
-              _mainMenuPageController.animateToPage(1,
-                  duration: _pageControllerDuration,
-                  curve: _pageControllerCurves);
-            },
-          ),
-          BottomNavigationItem(
-            assetImageLocation: 'assets/images/app_images/Actors.png',
-            onTapFunction: () {
-              _mainMenuPageController.animateToPage(2,
-                  duration: _pageControllerDuration,
-                  curve: _pageControllerCurves);
-            },
-          ),
-          BottomNavigationItem(
-            assetImageLocation: 'assets/images/app_images/Plays.png',
-            onTapFunction: () {
-              _mainMenuPageController.animateToPage(3,
-                  duration: _pageControllerDuration,
-                  curve: _pageControllerCurves);
-            },
-          ),
-          BottomNavigationItem(
-            assetImageLocation: 'assets/images/app_images/Earn Cash.png',
-            onTapFunction: () {
-              _mainMenuPageController.animateToPage(4,
-                  duration: _pageControllerDuration,
-                  curve: _pageControllerCurves);
-            },
-          ),
-          BottomNavigationItem(
-            assetImageLocation: 'assets/images/app_images/Tryouts.png',
-            onTapFunction: () {
-              _mainMenuPageController.animateToPage(5,
-                  duration: _pageControllerDuration,
-                  curve: _pageControllerCurves);
-            },
-          ),
-          BottomNavigationItem(
-            assetImageLocation: 'assets/images/app_images/Menu.png',
-            onTapFunction: () {
-              _mainMenuPageController.animateToPage(6,
-                  duration: _pageControllerDuration,
-                  curve: _pageControllerCurves);
-            },
-          ),
+          const Spacer(),
         ],
       ),
     );
