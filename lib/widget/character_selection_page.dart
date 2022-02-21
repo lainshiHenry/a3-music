@@ -20,39 +20,39 @@ class CharacterSelectionPage extends StatelessWidget {
     return Column(
       children: [
         const SizedBox(
-          height: 10,
+          height: 5,
         ),
         Image(
           image: AssetImage(_troupeBannerImageLocation!),
           height: 20,
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 4),
+          padding: const EdgeInsets.symmetric(horizontal: 3.0, vertical: 0),
           child: Row(
             children: [
               CharacterRowItem(
                 index: (0 + (6 * _pageIndex)),
-                width: _remainingWidth / 6,
+                width: _remainingWidth.floor().toDouble() / 6,
               ),
               CharacterRowItem(
                 index: (1 + (6 * _pageIndex)),
-                width: _remainingWidth / 6,
+                width: _remainingWidth.floor().toDouble() / 6,
               ),
               CharacterRowItem(
                 index: (2 + (6 * _pageIndex)),
-                width: _remainingWidth / 6,
+                width: _remainingWidth.floor().toDouble() / 6,
               ),
               CharacterRowItem(
                 index: (3 + (6 * _pageIndex)),
-                width: _remainingWidth / 6,
+                width: _remainingWidth.floor().toDouble() / 6,
               ),
               CharacterRowItem(
                 index: (4 + (6 * _pageIndex)),
-                width: _remainingWidth / 6,
+                width: _remainingWidth.floor().toDouble() / 6,
               ),
               CharacterRowItem(
                 index: (5 + (6 * _pageIndex)),
-                width: _remainingWidth / 6,
+                width: _remainingWidth.floor().toDouble() / 6,
               ),
             ],
           ),

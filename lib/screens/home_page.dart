@@ -30,6 +30,10 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    double _widthOfBox =
+        (MediaQuery.of(context).size.width * 0.7);
+    print(_widthOfBox);
+
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
@@ -70,35 +74,46 @@ class _HomePageState extends State<HomePage> {
                 const SizedBox(
                   height: 10,
                 ),
-                Container(
-                  padding: const EdgeInsets.only(left: 100, right: 175),
-                  width: MediaQuery.of(context).size.width,
-                  height: 280,
-                  child: PageView(
-                    controller: _mainMenuPageController,
-                    physics: const NeverScrollableScrollPhysics(),
-                    children: [
-                      Container(
-                        color: Colors.blue,
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.1,
+                    ),
+                    Container(
+                      color: Colors.blue,
+                      width: _widthOfBox,
+                      height: 270,
+                      child: PageView(
+                        controller: _mainMenuPageController,
+                        physics: const NeverScrollableScrollPhysics(),
+                        children: [
+                          Container(
+                            color: Colors.blue,
+                          ),
+                          Container(
+                            color: Colors.green,
+                          ),
+                          Container(
+                            color: Colors.yellow,
+                          ),
+                          Container(
+                            color: Colors.red,
+                          ),
+                          Container(
+                            color: Colors.pink,
+                          ),
+                          JukeboxMenuSection(
+                            pageController: _pageController,
+                            widthOfBox: _widthOfBox,
+                          ),
+                          Container(
+                            color: Colors.purple,
+                          ),
+                        ],
                       ),
-                      Container(
-                        color: Colors.green,
-                      ),
-                      Container(
-                        color: Colors.yellow,
-                      ),
-                      Container(
-                        color: Colors.red,
-                      ),
-                      Container(
-                        color: Colors.pink,
-                      ),
-                      JukeboxMenuSection(pageController: _pageController),
-                      Container(
-                        color: Colors.purple,
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
                 const Spacer(
                   flex: 1,
