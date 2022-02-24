@@ -5,11 +5,13 @@ class BottomNavigationMenuSection extends StatelessWidget {
   const BottomNavigationMenuSection({
     Key? key,
     required PageController mainMenuPageController,
+    required Function voidCallbackFunction,
   })  : _mainMenuPageController = mainMenuPageController,
+        _voidCallback = voidCallbackFunction,
         super(key: key);
 
   final PageController _mainMenuPageController;
-
+  final Function _voidCallback;
   final Curve _pageControllerCurves = Curves.ease;
   final Duration _pageControllerDuration = const Duration(milliseconds: 500);
 
@@ -17,6 +19,7 @@ class BottomNavigationMenuSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height * 0.1,
       child: Row(
         children: [
           const Spacer(),
@@ -29,6 +32,7 @@ class BottomNavigationMenuSection extends StatelessWidget {
                   _mainMenuPageController.animateToPage(0,
                       duration: _pageControllerDuration,
                       curve: _pageControllerCurves);
+                  _voidCallback(0);
                 },
               ),
               BottomNavigationItem(
@@ -37,6 +41,7 @@ class BottomNavigationMenuSection extends StatelessWidget {
                   _mainMenuPageController.animateToPage(1,
                       duration: _pageControllerDuration,
                       curve: _pageControllerCurves);
+                  _voidCallback(1);
                 },
               ),
               BottomNavigationItem(
@@ -45,6 +50,7 @@ class BottomNavigationMenuSection extends StatelessWidget {
                   _mainMenuPageController.animateToPage(2,
                       duration: _pageControllerDuration,
                       curve: _pageControllerCurves);
+                  _voidCallback(2);
                 },
               ),
               BottomNavigationItem(
@@ -53,6 +59,7 @@ class BottomNavigationMenuSection extends StatelessWidget {
                   _mainMenuPageController.animateToPage(3,
                       duration: _pageControllerDuration,
                       curve: _pageControllerCurves);
+                  _voidCallback(3);
                 },
               ),
               BottomNavigationItem(
@@ -61,6 +68,7 @@ class BottomNavigationMenuSection extends StatelessWidget {
                   _mainMenuPageController.animateToPage(4,
                       duration: _pageControllerDuration,
                       curve: _pageControllerCurves);
+                  _voidCallback(4);
                 },
               ),
               BottomNavigationItem(
@@ -69,6 +77,7 @@ class BottomNavigationMenuSection extends StatelessWidget {
                   _mainMenuPageController.animateToPage(5,
                       duration: _pageControllerDuration,
                       curve: _pageControllerCurves);
+                  _voidCallback(5);
                 },
               ),
               BottomNavigationItem(
@@ -77,6 +86,7 @@ class BottomNavigationMenuSection extends StatelessWidget {
                   _mainMenuPageController.animateToPage(6,
                       duration: _pageControllerDuration,
                       curve: _pageControllerCurves);
+                  _voidCallback(6);
                 },
               ),
             ],

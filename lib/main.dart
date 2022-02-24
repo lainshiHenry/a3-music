@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'A3 Music Player',
       debugShowCheckedModeBanner: false,
+      showSemanticsDebugger: false,
       theme: ThemeData(
         // This is the theme of your application.
         //

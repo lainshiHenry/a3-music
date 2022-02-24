@@ -19,12 +19,15 @@ class BottomNavigationItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: _onTapFunction!,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 0.25),
-        child: Image(
-          image: AssetImage(_buttonAssetImageLocation!),
-          height: 43,
-          fit: BoxFit.fitWidth,
+      child: Container(
+        decoration: BoxDecoration(border: Border.all()),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 0.25),
+          child: Image(
+            image: AssetImage(_buttonAssetImageLocation!),
+            // height: 43,
+            fit: BoxFit.fitHeight,
+          ),
         ),
       ),
     );
