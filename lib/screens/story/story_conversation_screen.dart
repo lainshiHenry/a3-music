@@ -20,14 +20,14 @@ class _StoryConversationScreenState extends State<StoryConversationScreen> {
 
   @override
   Widget build(BuildContext context) {
-    print(widget._storyLine[_currentStoryIndex].talkingCharacter!.firstName);
+    print(widget._storyLine[_currentStoryIndex].talkingCharacter.firstName);
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
             fit: BoxFit.fill,
             image: AssetImage(
-                widget._storyLine[_currentStoryIndex].backgroundImage!),
+                widget._storyLine[_currentStoryIndex].backgroundImage),
           ),
         ),
         child: GestureDetector(
@@ -45,7 +45,7 @@ class _StoryConversationScreenState extends State<StoryConversationScreen> {
               Center(
                 child: StoryCharacterImage(
                   assetImageLocation: widget._storyLine[_currentStoryIndex]
-                      .talkingCharacter!.fullBodyAssetImageLocation!,
+                      .talkingCharacter.fullBodyAssetImageLocation!,
                 ),
               ),
               Column(
@@ -55,7 +55,7 @@ class _StoryConversationScreenState extends State<StoryConversationScreen> {
                   ),
                   BottomStoryTextBlock(
                     talkingCharacterName: widget._storyLine[_currentStoryIndex]
-                        .talkingCharacter!.firstName,
+                        .talkingCharacter.firstName,
                     talkingCharacterText: widget
                         ._storyLine[_currentStoryIndex].talkingCharacterText,
                   ),

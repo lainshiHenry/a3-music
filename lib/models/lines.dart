@@ -1,15 +1,21 @@
 import 'package:a3_music/models/character.dart';
 
 class Line {
-  String? talkingCharacterName;
-  Character? talkingCharacter;
-  String? talkingCharacterText;
-  String? backgroundImage;
+  Character talkingCharacter;
+  String talkingCharacterText;
+  String backgroundImage;
+  CharacterPosition characterPosition;
 
   Line({
-    this.talkingCharacterName,
-    this.talkingCharacterText,
-    this.talkingCharacter,
-    this.backgroundImage,
+    required this.talkingCharacterText,
+    required this.talkingCharacter,
+    required this.backgroundImage,
+    required this.characterPosition,
   });
+}
+
+enum CharacterPosition {
+  left,
+  center,
+  right,
 }

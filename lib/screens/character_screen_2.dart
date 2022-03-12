@@ -16,7 +16,7 @@ class _HomeScreen2State extends State<HomeScreen2> {
   final Services _services = Services();
   int _currentPage = 0;
   final PageController _pageController = PageController(initialPage: 0);
-  List<String> _troupeHeaderImageBanner = [
+  final List<String> _troupeHeaderImageBanner = [
     'assets/images/app_images/Spring/Spring Troupe.png',
     'assets/images/app_images/Summer/Summer Troupe.png',
     'assets/images/app_images/Autumn/Autumn Troupe.png',
@@ -168,7 +168,9 @@ class _HomeScreen2State extends State<HomeScreen2> {
                           builder: (context) => StoryConversationScreen(
                             storyLine: [
                               Line(
-                                talkingCharacterName: 'Sakuya',
+                                characterPosition: CharacterPosition.left,
+                                backgroundImage:
+                                    'assets/images/characters/faces/sakuya.png',
                                 talkingCharacterText: 'Hello',
                                 talkingCharacter: Character(
                                   actor: Actor.sakuya,
@@ -186,7 +188,9 @@ class _HomeScreen2State extends State<HomeScreen2> {
                                 ),
                               ),
                               Line(
-                                talkingCharacterName: 'Tsumugi',
+                                characterPosition: CharacterPosition.center,
+                                backgroundImage:
+                                    'assets/images/characters/faces/sakuya.png',
                                 talkingCharacterText: 'How Are you?',
                                 talkingCharacter: Character(
                                   actor: Actor.tsumugi,

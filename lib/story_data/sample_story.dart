@@ -9,22 +9,26 @@ List<Line> sampleStoryText = [
   Line(
     talkingCharacterText: 'Hello',
     talkingCharacter: SakuyaSakuma,
-    backgroundImage: 'assets/images/song_covers/character_song/azami.png',
+    backgroundImage: 'assets/images/background_images/dorm_main_floor.jpg',
+    characterPosition: CharacterPosition.center,
   ),
   Line(
     talkingCharacterText: 'How Are you?',
     talkingCharacter: TsumugiTsukioka,
-    backgroundImage: 'assets/images/song_covers/character_song/azami.png',
+    backgroundImage: 'assets/images/background_images/dorm_main_floor.jpg',
+    characterPosition: CharacterPosition.center,
   ),
   Line(
     talkingCharacterText: 'You came, My Lady',
     talkingCharacter: Citron,
-    backgroundImage: 'assets/images/song_covers/character_song/guy.png',
+    backgroundImage: 'assets/images/background_images/veld_street.jpg',
+    characterPosition: CharacterPosition.center,
   ),
   Line(
     talkingCharacterText: 'Come. Let\'s Chat',
     talkingCharacter: AzumaYukishiro,
-    backgroundImage: 'assets/images/song_covers/character_song/citron.png',
+    backgroundImage: 'assets/images/background_images/mankai_theatre_front.jpg',
+    characterPosition: CharacterPosition.center,
   ),
 ];
 

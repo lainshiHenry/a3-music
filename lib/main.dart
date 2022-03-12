@@ -1,10 +1,7 @@
-import 'package:a3_music/models/character.dart';
-import 'package:a3_music/models/lines.dart';
 import 'package:a3_music/models/song_list_model.dart';
 import 'package:a3_music/screens/character_screen.dart';
 import 'package:a3_music/screens/character_screen_2.dart';
 import 'package:a3_music/screens/home_page.dart';
-import 'package:a3_music/screens/story/story_conversation_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -51,46 +48,7 @@ class MyApp extends StatelessWidget {
         HomeScreen.id: (context) => const HomeScreen(),
         'HomeScreen2': (context) => const HomeScreen2(),
         'HomePage': (context) => HomePage(),
-        'StoryConversationScreen': (context) => StoryConversationScreen(
-              storyLine: [
-                Line(
-                  talkingCharacterName: 'Sakuya',
-                  talkingCharacterText: 'Hello',
-                  talkingCharacter: Character(
-                    actor: Actor.sakuya,
-                    firstName: 'Sakuya',
-                    lastName: 'Sakuma',
-                    assetImageLocation:
-                        'assets/images/characters/faces/sakuya.png',
-                    troupe: Troupe.spring,
-                    glitterAssetImageLocation:
-                        'assets/images/characters/glitter/sakuya_glitter.png',
-                    chibiAssetImageLocation:
-                        'assets/images/characters/chibi/sakuya_chibi.png',
-                    fullBodyAssetImageLocation:
-                        'assets/images/characters/fullbody/sakuya.png',
-                  ),
-                ),
-                Line(
-                  talkingCharacterName: 'Tsumugi',
-                  talkingCharacterText: 'How Are you?',
-                  talkingCharacter: Character(
-                    actor: Actor.tsumugi,
-                    firstName: 'Tsumugi',
-                    lastName: 'Tsukioka',
-                    assetImageLocation:
-                        'assets/images/characters/faces/tsumugi.png',
-                    glitterAssetImageLocation:
-                        'assets/images/characters/glitter/tsumugi_glitter.png',
-                    troupe: Troupe.winter,
-                    chibiAssetImageLocation:
-                        'assets/images/characters/chibi/tsumugi_chibi.png',
-                    fullBodyAssetImageLocation:
-                        'assets/images/characters/fullbody/tsumugi.png',
-                  ),
-                ),
-              ],
-            ),
+
         // SongsListScreen.id: (context) => const SongsListScreen(),
       },
     );
