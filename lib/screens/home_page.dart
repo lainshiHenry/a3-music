@@ -1,7 +1,6 @@
-import 'package:a3_music/data/character_data.dart';
-import 'package:a3_music/models/lines.dart';
 import 'package:a3_music/screens/story/story_conversation_screen.dart';
 import 'package:a3_music/services/services.dart';
+import 'package:a3_music/story_data/sample_story.dart';
 import 'package:a3_music/widget/bottom_navigation_bar.dart';
 import 'package:a3_music/widget/jukebox_menu_section.dart';
 import 'package:flutter/material.dart';
@@ -134,31 +133,7 @@ class _HomePageState extends State<HomePage> {
                                       MaterialPageRoute(
                                         builder: (context) =>
                                             StoryConversationScreen(
-                                          storyLine: [
-                                            Line(
-                                              talkingCharacterName: 'Sakuya',
-                                              talkingCharacterText: 'Hello',
-                                              talkingCharacter: SakuyaSakuma,
-                                            ),
-                                            Line(
-                                              talkingCharacterName: 'Tsumugi',
-                                              talkingCharacterText:
-                                                  'How Are you?',
-                                              talkingCharacter: TsumugiTsukioka,
-                                            ),
-                                            Line(
-                                              talkingCharacterName: 'Citron',
-                                              talkingCharacterText:
-                                                  'You came, My Lady',
-                                              talkingCharacter: Citron,
-                                            ),
-                                            Line(
-                                              talkingCharacterName: 'Azuma',
-                                              talkingCharacterText:
-                                                  'Come. Let\'s Chat',
-                                              talkingCharacter: AzumaYukishiro,
-                                            ),
-                                          ],
+                                          storyLine: sampleStoryText,
                                         ),
                                       ),
                                     );

@@ -20,39 +20,49 @@ class _StoryConversationScreenState extends State<StoryConversationScreen> {
 
   @override
   Widget build(BuildContext context) {
+    print(widget._storyLine[_currentStoryIndex].talkingCharacter!.firstName);
     return Scaffold(
-      body: GestureDetector(
-        onTap: () {
-          setState(() {
-            if (_currentStoryIndex != widget._storyLine.length - 1) {
-              _currentStoryIndex++;
-            } else {
-              Navigator.pop(context);
-            }
-          });
-        },
-        child: Stack(
-          children: [
-            Center(
-              child: StoryCharacterImage(
-                assetImageLocation: widget._storyLine[_currentStoryIndex]
-                    .talkingCharacter!.fullBodyAssetImageLocation!,
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            fit: BoxFit.fill,
+            image: AssetImage(
+                widget._storyLine[_currentStoryIndex].backgroundImage!),
+          ),
+        ),
+        child: GestureDetector(
+          onTap: () {
+            setState(() {
+              if (_currentStoryIndex != widget._storyLine.length - 1) {
+                _currentStoryIndex++;
+              } else {
+                Navigator.pop(context);
+              }
+            });
+          },
+          child: Stack(
+            children: [
+              Center(
+                child: StoryCharacterImage(
+                  assetImageLocation: widget._storyLine[_currentStoryIndex]
+                      .talkingCharacter!.fullBodyAssetImageLocation!,
+                ),
               ),
-            ),
-            Column(
-              children: [
-                Expanded(
-                  child: Container(),
-                ),
-                BottomStoryTextBlock(
-                  talkingCharacterName: widget
-                      ._storyLine[_currentStoryIndex].talkingCharacterName,
-                  talkingCharacterText: widget
-                      ._storyLine[_currentStoryIndex].talkingCharacterText,
-                ),
-              ],
-            ),
-          ],
+              Column(
+                children: [
+                  Expanded(
+                    child: Container(),
+                  ),
+                  BottomStoryTextBlock(
+                    talkingCharacterName: widget._storyLine[_currentStoryIndex]
+                        .talkingCharacter!.firstName,
+                    talkingCharacterText: widget
+                        ._storyLine[_currentStoryIndex].talkingCharacterText,
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
