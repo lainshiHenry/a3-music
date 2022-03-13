@@ -32,20 +32,21 @@ enum Actor {
   azuma,
   guy,
   izumi,
+  none,
 }
 
 class Character {
-  String? firstName;
-  String? lastName;
-  String? assetImageLocation;
-  String? glitterAssetImageLocation;
-  String? chibiAssetImageLocation;
-  String? fullBodyAssetImageLocation;
-  String? characterSelectionImageLocation;
-  Troupe troupe;
-  Actor? actor;
+  final String? firstName;
+  final String? lastName;
+  final String? assetImageLocation;
+  final String? glitterAssetImageLocation;
+  final String? chibiAssetImageLocation;
+  final String? fullBodyAssetImageLocation;
+  final String? characterSelectionImageLocation;
+  final Troupe troupe;
+  final Actor? actor;
 
-  Character({
+  const Character({
     this.firstName = '',
     this.lastName = '',
     this.assetImageLocation = '',
@@ -54,6 +55,6 @@ class Character {
     this.fullBodyAssetImageLocation = '',
     this.characterSelectionImageLocation = '',
     this.troupe = Troupe.other,
-    this.actor,
+    this.actor = Actor.none,
   });
 }

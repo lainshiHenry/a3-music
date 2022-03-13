@@ -14,6 +14,17 @@ List<Song> autumnTroupeSongs = [
     ],
   ),
   Song(
+    songName: 'Zero Limit',
+    songAudioFileLocation: 'music/zero_limit.mp3',
+    singers: [
+      Actor.banri,
+      Actor.juza,
+      Actor.taichi,
+      Actor.omi,
+      Actor.sakyo,
+    ],
+  ),
+  Song(
     songName: 'Second Shot',
     songAudioFileLocation: 'music/second_shot.mp3',
     singers: [
@@ -23,6 +34,22 @@ List<Song> autumnTroupeSongs = [
       Actor.omi,
       Actor.sakyo,
       Actor.azami,
+    ],
+  ),
+  Song(
+    songName: 'Buzama',
+    songAudioFileLocation: 'music/buzama.mp3',
+    singers: [
+      Actor.juza,
+      Actor.sakyo,
+    ],
+  ),
+  Song(
+    songName: 'Just For Myself',
+    songAudioFileLocation: 'music/just_for_myself.mp3',
+    singers: [
+      Actor.taichi,
+      Actor.omi,
     ],
   ),
 ];

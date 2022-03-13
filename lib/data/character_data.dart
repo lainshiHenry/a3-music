@@ -2,7 +2,7 @@
 
 import 'package:a3_music/models/character.dart';
 
-Character SakuyaSakuma = Character(
+Character SakuyaSakuma = const Character(
   actor: Actor.sakuya,
   firstName: 'Sakuya',
   lastName: 'Sakuma',
@@ -14,7 +14,7 @@ Character SakuyaSakuma = Character(
   fullBodyAssetImageLocation: 'assets/images/characters/fullbody/sakuya.png',
   characterSelectionImageLocation: 'assets/images/app_images/Spring/Sakuya.png',
 );
-Character MasumiUsui = Character(
+Character MasumiUsui = const Character(
   actor: Actor.masumi,
   firstName: 'Masumi',
   lastName: 'Usui',
@@ -26,7 +26,7 @@ Character MasumiUsui = Character(
   characterSelectionImageLocation: 'assets/images/app_images/Spring/Masumi.png',
 );
 
-Character TsuzuruMinagi = Character(
+Character TsuzuruMinagi = const Character(
   actor: Actor.tsuzuru,
   firstName: 'Tsuzuru',
   lastName: 'Minagi',
@@ -38,7 +38,7 @@ Character TsuzuruMinagi = Character(
   characterSelectionImageLocation:
       'assets/images/app_images/Spring/Tsuzuru.png',
 );
-Character ItaruChigasaki = Character(
+Character ItaruChigasaki = const Character(
   actor: Actor.itaru,
   firstName: 'Itaru',
   lastName: 'Chigasaki',
@@ -48,7 +48,7 @@ Character ItaruChigasaki = Character(
   chibiAssetImageLocation: 'assets/images/characters/chibi/itaru_chibi.png',
   characterSelectionImageLocation: 'assets/images/app_images/Spring/Itaru.png',
 );
-Character Citron = Character(
+Character Citron = const Character(
   actor: Actor.citron,
   firstName: 'Citron',
   lastName: '',
@@ -59,7 +59,7 @@ Character Citron = Character(
   characterSelectionImageLocation: 'assets/images/app_images/Spring/Citron.png',
   fullBodyAssetImageLocation: 'assets/images/characters/fullbody/citron.png',
 );
-Character ChikageUtsuki = Character(
+Character ChikageUtsuki = const Character(
   actor: Actor.chikage,
   firstName: 'Chikage',
   lastName: 'Utsuki',
@@ -70,7 +70,7 @@ Character ChikageUtsuki = Character(
   characterSelectionImageLocation:
       'assets/images/app_images/Spring/Chikage.png',
 );
-Character TenmaSumeragi = Character(
+Character TenmaSumeragi = const Character(
   actor: Actor.tenma,
   firstName: 'Tenma',
   lastName: 'Sumeragi',
@@ -80,7 +80,7 @@ Character TenmaSumeragi = Character(
   chibiAssetImageLocation: 'assets/images/characters/chibi/tenma_chibi.png',
   characterSelectionImageLocation: 'assets/images/app_images/Summer/Tenma.png',
 );
-Character YukiRurikawa = Character(
+Character YukiRurikawa = const Character(
   actor: Actor.yuki,
   firstName: 'Yuki',
   lastName: 'Rurikawa',
@@ -90,7 +90,7 @@ Character YukiRurikawa = Character(
   chibiAssetImageLocation: 'assets/images/characters/chibi/yuki_chibi.png',
   characterSelectionImageLocation: 'assets/images/app_images/Summer/Yuki.png',
 );
-Character MukuSakisaka = Character(
+Character MukuSakisaka = const Character(
   actor: Actor.muku,
   firstName: 'Muku',
   lastName: 'Sakisaka',
@@ -100,7 +100,7 @@ Character MukuSakisaka = Character(
   chibiAssetImageLocation: 'assets/images/characters/chibi/muku_chibi.png',
   characterSelectionImageLocation: 'assets/images/app_images/Summer/Muku.png',
 );
-Character MisumiIkaruga = Character(
+Character MisumiIkaruga = const Character(
   actor: Actor.misumi,
   firstName: 'Misumi',
   lastName: 'Ikaruga',
@@ -110,7 +110,7 @@ Character MisumiIkaruga = Character(
   chibiAssetImageLocation: 'assets/images/characters/chibi/misumi_chibi.png',
   characterSelectionImageLocation: 'assets/images/app_images/Summer/Misumi.png',
 );
-Character KazunariMiyoshi = Character(
+Character KazunariMiyoshi = const Character(
   actor: Actor.kazunari,
   firstName: 'Kazunari',
   lastName: 'Miyoshi',
@@ -121,7 +121,7 @@ Character KazunariMiyoshi = Character(
   characterSelectionImageLocation:
       'assets/images/app_images/Summer/Kazunari.png',
 );
-Character KumonHyodo = Character(
+Character KumonHyodo = const Character(
   actor: Actor.kumon,
   firstName: 'Kumon',
   lastName: 'Hyodo',
@@ -131,7 +131,7 @@ Character KumonHyodo = Character(
   chibiAssetImageLocation: 'assets/images/characters/chibi/kumon_chibi.png',
   characterSelectionImageLocation: 'assets/images/app_images/Summer/Kumon.png',
 );
-Character BanriSettsu = Character(
+Character BanriSettsu = const Character(
   actor: Actor.banri,
   firstName: 'Banri',
   lastName: 'Settsu',
@@ -141,7 +141,7 @@ Character BanriSettsu = Character(
   chibiAssetImageLocation: 'assets/images/characters/chibi/banri_chibi.png',
   characterSelectionImageLocation: 'assets/images/app_images/Autumn/Banri.png',
 );
-Character JuzaHyodo = Character(
+Character JuzaHyodo = const Character(
   actor: Actor.juza,
   firstName: 'Juza',
   lastName: 'Hyodo',
@@ -151,7 +151,7 @@ Character JuzaHyodo = Character(
   chibiAssetImageLocation: 'assets/images/characters/chibi/juza_chibi.png',
   characterSelectionImageLocation: 'assets/images/app_images/Autumn/Juza.png',
 );
-Character TaichiNanao = Character(
+Character TaichiNanao = const Character(
   actor: Actor.taichi,
   firstName: 'Taichi',
   lastName: 'Nanao',
@@ -161,7 +161,7 @@ Character TaichiNanao = Character(
   chibiAssetImageLocation: 'assets/images/characters/chibi/taichi_chibi.png',
   characterSelectionImageLocation: 'assets/images/app_images/Autumn/Taichi.png',
 );
-Character OmiFushimi = Character(
+Character OmiFushimi = const Character(
   actor: Actor.omi,
   firstName: 'Omi',
   lastName: 'Fushimi',
@@ -171,7 +171,7 @@ Character OmiFushimi = Character(
   chibiAssetImageLocation: 'assets/images/characters/chibi/omi_chibi.png',
   characterSelectionImageLocation: 'assets/images/app_images/Autumn/Omi.png',
 );
-Character SakyoFuruichi = Character(
+Character SakyoFuruichi = const Character(
   actor: Actor.sakyo,
   firstName: 'Sakyo',
   lastName: 'Furuichi',
@@ -181,7 +181,7 @@ Character SakyoFuruichi = Character(
   chibiAssetImageLocation: 'assets/images/characters/chibi/sakyo_chibi.png',
   characterSelectionImageLocation: 'assets/images/app_images/Autumn/Sakyo.png',
 );
-Character AzamiIzumida = Character(
+Character AzamiIzumida = const Character(
   actor: Actor.azami,
   firstName: 'Azami',
   lastName: 'Izumida',
@@ -191,7 +191,7 @@ Character AzamiIzumida = Character(
   chibiAssetImageLocation: 'assets/images/characters/chibi/azami_chibi.png',
   characterSelectionImageLocation: 'assets/images/app_images/Autumn/Azami.png',
 );
-Character TsumugiTsukioka = Character(
+Character TsumugiTsukioka = const Character(
   actor: Actor.tsumugi,
   firstName: 'Tsumugi',
   lastName: 'Tsukioka',
@@ -204,7 +204,7 @@ Character TsumugiTsukioka = Character(
   characterSelectionImageLocation:
       'assets/images/app_images/Winter/Tsumugi.png',
 );
-Character TasukuTakato = Character(
+Character TasukuTakato = const Character(
   actor: Actor.tasuku,
   firstName: 'Tasuku',
   lastName: 'Takato',
@@ -214,7 +214,7 @@ Character TasukuTakato = Character(
   chibiAssetImageLocation: 'assets/images/characters/chibi/tasuku_chibi.png',
   characterSelectionImageLocation: 'assets/images/app_images/Winter/Tasuku.png',
 );
-Character HisokaMikage = Character(
+Character HisokaMikage = const Character(
   actor: Actor.hisoka,
   firstName: 'Hisoka',
   lastName: 'Mikage',
@@ -224,7 +224,7 @@ Character HisokaMikage = Character(
   chibiAssetImageLocation: 'assets/images/characters/chibi/hisoka_chibi.png',
   characterSelectionImageLocation: 'assets/images/app_images/Winter/Hisoka.png',
 );
-Character HomareArisugawa = Character(
+Character HomareArisugawa = const Character(
   actor: Actor.homare,
   firstName: 'Homare',
   lastName: 'Arisugawa',
@@ -234,7 +234,7 @@ Character HomareArisugawa = Character(
   chibiAssetImageLocation: 'assets/images/characters/chibi/homare_chibi.png',
   characterSelectionImageLocation: 'assets/images/app_images/Winter/Homare.png',
 );
-Character AzumaYukishiro = Character(
+Character AzumaYukishiro = const Character(
   actor: Actor.azuma,
   firstName: 'Azuma',
   lastName: 'Yukishiro',
@@ -245,7 +245,7 @@ Character AzumaYukishiro = Character(
   characterSelectionImageLocation: 'assets/images/app_images/Winter/Azuma.png',
   fullBodyAssetImageLocation: 'assets/images/characters/fullbody/azuma.png',
 );
-Character Guy = Character(
+Character Guy = const Character(
   actor: Actor.guy,
   firstName: 'Guy',
   lastName: '',

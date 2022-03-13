@@ -14,4 +14,20 @@ List<Song> summerTroupeSongs = [
       Actor.kumon,
     ],
   ),
+  Song(
+    songName: 'Shake The Shape',
+    songAudioFileLocation: 'music/shake_the_shape.mp3',
+    singers: [
+      Actor.misumi,
+      Actor.kumon,
+    ],
+  ),
+  Song(
+    songName: 'Susume Pirates',
+    songAudioFileLocation: 'music/susume_pirates.mp3',
+    singers: [
+      Actor.misumi,
+      Actor.muku,
+    ],
+  ),
 ];

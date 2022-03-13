@@ -61,4 +61,13 @@ List<Song> winterTroupeSongs = [
       Actor.homare,
     ],
   ),
+  Song(
+    songName: 'Unmasked',
+    playName: '',
+    songAudioFileLocation: 'music/unmasked.mp3',
+    singers: [
+      Actor.tsumugi,
+      Actor.guy,
+    ],
+  ),
 ];

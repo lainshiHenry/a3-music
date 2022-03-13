@@ -1,3 +1,4 @@
+import 'package:a3_music/models/character.dart';
 import 'package:a3_music/models/lines.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +21,15 @@ class _StoryConversationScreenState extends State<StoryConversationScreen> {
 
   @override
   Widget build(BuildContext context) {
-    print(widget._storyLine[_currentStoryIndex].talkingCharacter.firstName);
+    print('Left: ' +
+        widget._storyLine[_currentStoryIndex].leftTalkingCharacter.actor
+            .toString());
+    print('Center: ' +
+        widget._storyLine[_currentStoryIndex].centerTalkingCharacter.actor
+            .toString());
+    print('Right: ' +
+        widget._storyLine[_currentStoryIndex].rightTalkingCharacter.actor
+            .toString());
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
@@ -42,10 +51,69 @@ class _StoryConversationScreenState extends State<StoryConversationScreen> {
           },
           child: Stack(
             children: [
-              Center(
-                child: StoryCharacterImage(
-                  assetImageLocation: widget._storyLine[_currentStoryIndex]
-                      .talkingCharacter.fullBodyAssetImageLocation!,
+              SizedBox(
+                height: MediaQuery.of(context).size.height,
+                width: MediaQuery.of(context).size.width,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    const Spacer(
+                      flex: 3,
+                    ),
+                    widget._storyLine[_currentStoryIndex].leftTalkingCharacter
+                                .actor ==
+                            Actor.none
+                        ? const SizedBox(
+                            width: 200,
+                          )
+                        : SizedBox(
+                            width: 200,
+                            child: StoryCharacterImage(
+                              assetImageLocation: widget
+                                  ._storyLine[_currentStoryIndex]
+                                  .leftTalkingCharacter
+                                  .fullBodyAssetImageLocation!,
+                            ),
+                          ),
+                    const Spacer(
+                      flex: 1,
+                    ),
+                    widget._storyLine[_currentStoryIndex].centerTalkingCharacter
+                                .actor ==
+                            Actor.none
+                        ? const SizedBox(
+                            width: 200,
+                          )
+                        : SizedBox(
+                            width: 200,
+                            child: StoryCharacterImage(
+                              assetImageLocation: widget
+                                  ._storyLine[_currentStoryIndex]
+                                  .centerTalkingCharacter
+                                  .fullBodyAssetImageLocation!,
+                            ),
+                          ),
+                    const Spacer(
+                      flex: 1,
+                    ),
+                    widget._storyLine[_currentStoryIndex].rightTalkingCharacter
+                                .actor ==
+                            Actor.none
+                        ? const SizedBox(
+                            width: 200,
+                          )
+                        : SizedBox(
+                            child: StoryCharacterImage(
+                              assetImageLocation: widget
+                                  ._storyLine[_currentStoryIndex]
+                                  .rightTalkingCharacter
+                                  .fullBodyAssetImageLocation!,
+                            ),
+                          ),
+                    const Spacer(
+                      flex: 3,
+                    ),
+                  ],
                 ),
               ),
               Column(
@@ -86,8 +154,9 @@ class StoryCharacterImage extends StatelessWidget {
       child: Image.asset(
         _assetImageLocation!,
         alignment: Alignment.topCenter,
-        width: 600,
-        fit: BoxFit.fitWidth,
+        width: 200,
+        //height: 600,
+        fit: BoxFit.cover,
       ),
     );
   }

@@ -8,25 +8,32 @@ StoryDetails sampleStoryMetaData = StoryDetails(
 List<Line> sampleStoryText = [
   Line(
     talkingCharacterText: 'Hello',
+    leftTalkingCharacter: SakuyaSakuma,
     talkingCharacter: SakuyaSakuma,
     backgroundImage: 'assets/images/background_images/dorm_main_floor.jpg',
     characterPosition: CharacterPosition.center,
   ),
   Line(
     talkingCharacterText: 'How Are you?',
+    leftTalkingCharacter: SakuyaSakuma,
+    rightTalkingCharacter: TsumugiTsukioka,
     talkingCharacter: TsumugiTsukioka,
     backgroundImage: 'assets/images/background_images/dorm_main_floor.jpg',
     characterPosition: CharacterPosition.center,
   ),
   Line(
     talkingCharacterText: 'You came, My Lady',
+    centerTalkingCharacter: Citron,
+    leftTalkingCharacter: SakuyaSakuma,
+    rightTalkingCharacter: TsumugiTsukioka,
     talkingCharacter: Citron,
     backgroundImage: 'assets/images/background_images/veld_street.jpg',
     characterPosition: CharacterPosition.center,
   ),
   Line(
     talkingCharacterText: 'Come. Let\'s Chat',
-    talkingCharacter: AzumaYukishiro,
+    centerTalkingCharacter: Citron,
+    talkingCharacter: Citron,
     backgroundImage: 'assets/images/background_images/mankai_theatre_front.jpg',
     characterPosition: CharacterPosition.center,
   ),

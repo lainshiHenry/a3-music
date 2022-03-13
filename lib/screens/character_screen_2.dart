@@ -1,6 +1,3 @@
-import 'package:a3_music/models/character.dart';
-import 'package:a3_music/models/lines.dart';
-import 'package:a3_music/screens/story/story_conversation_screen.dart';
 import 'package:a3_music/services/services.dart';
 import 'package:a3_music/widget/character_selection_page.dart';
 import 'package:flutter/material.dart';
@@ -162,55 +159,55 @@ class _HomeScreen2State extends State<HomeScreen2> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => StoryConversationScreen(
-                            storyLine: [
-                              Line(
-                                characterPosition: CharacterPosition.left,
-                                backgroundImage:
-                                    'assets/images/characters/faces/sakuya.png',
-                                talkingCharacterText: 'Hello',
-                                talkingCharacter: Character(
-                                  actor: Actor.sakuya,
-                                  firstName: 'Sakuya',
-                                  lastName: 'Sakuma',
-                                  assetImageLocation:
-                                      'assets/images/characters/faces/sakuya.png',
-                                  troupe: Troupe.spring,
-                                  glitterAssetImageLocation:
-                                      'assets/images/characters/glitter/sakuya_glitter.png',
-                                  chibiAssetImageLocation:
-                                      'assets/images/characters/chibi/sakuya_chibi.png',
-                                  fullBodyAssetImageLocation:
-                                      'assets/images/characters/fullbody/sakuya.png',
-                                ),
-                              ),
-                              Line(
-                                characterPosition: CharacterPosition.center,
-                                backgroundImage:
-                                    'assets/images/characters/faces/sakuya.png',
-                                talkingCharacterText: 'How Are you?',
-                                talkingCharacter: Character(
-                                  actor: Actor.tsumugi,
-                                  firstName: 'Tsumugi',
-                                  lastName: 'Tsukioka',
-                                  assetImageLocation:
-                                      'assets/images/characters/faces/tsumugi.png',
-                                  glitterAssetImageLocation:
-                                      'assets/images/characters/glitter/tsumugi_glitter.png',
-                                  troupe: Troupe.winter,
-                                  chibiAssetImageLocation:
-                                      'assets/images/characters/chibi/tsumugi_chibi.png',
-                                  fullBodyAssetImageLocation:
-                                      'assets/images/characters/fullbody/tsumugi.png',
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) => StoryConversationScreen(
+                      //       storyLine: [
+                      //         Line(
+                      //           characterPosition: CharacterPosition.left,
+                      //           backgroundImage:
+                      //               'assets/images/characters/faces/sakuya.png',
+                      //           talkingCharacterText: 'Hello',
+                      //           centerTalkingCharacter: Character(
+                      //             actor: Actor.sakuya,
+                      //             firstName: 'Sakuya',
+                      //             lastName: 'Sakuma',
+                      //             assetImageLocation:
+                      //                 'assets/images/characters/faces/sakuya.png',
+                      //             troupe: Troupe.spring,
+                      //             glitterAssetImageLocation:
+                      //                 'assets/images/characters/glitter/sakuya_glitter.png',
+                      //             chibiAssetImageLocation:
+                      //                 'assets/images/characters/chibi/sakuya_chibi.png',
+                      //             fullBodyAssetImageLocation:
+                      //                 'assets/images/characters/fullbody/sakuya.png',
+                      //           ),
+                      //         ),
+                      //         Line(
+                      //           characterPosition: CharacterPosition.center,
+                      //           backgroundImage:
+                      //               'assets/images/characters/faces/sakuya.png',
+                      //           talkingCharacterText: 'How Are you?',
+                      //           centerTalkingCharacter: Character(
+                      //             actor: Actor.tsumugi,
+                      //             firstName: 'Tsumugi',
+                      //             lastName: 'Tsukioka',
+                      //             assetImageLocation:
+                      //                 'assets/images/characters/faces/tsumugi.png',
+                      //             glitterAssetImageLocation:
+                      //                 'assets/images/characters/glitter/tsumugi_glitter.png',
+                      //             troupe: Troupe.winter,
+                      //             chibiAssetImageLocation:
+                      //                 'assets/images/characters/chibi/tsumugi_chibi.png',
+                      //             fullBodyAssetImageLocation:
+                      //                 'assets/images/characters/fullbody/tsumugi.png',
+                      //           ),
+                      //         ),
+                      //       ],
+                      //     ),
+                      //   ),
+                      // );
                     },
                     child: Container(
                       color: Colors.grey,
